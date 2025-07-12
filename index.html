@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Otto Shalom Damilare - AI Developer & Tech Generalist</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{colors:{primary:'#0066FF',secondary:'#00D1FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:root {
+--tech-blue: #0066FF;
+--tech-cyan: #00D1FF;
+--tech-purple: #6B46C1;
+--tech-indigo: #4F46E5;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+@keyframes shine {
+from {
+background-position: 200% center;
+}
+to {
+background-position: -200% center;
+}
+}
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.hero-bg {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.readdy.ai/image/86e6903c65250f223d0e72f2f0d8e56a/07ddf9f99425c4de58d12e5cb145de9b.png');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+.gradient-text {
+background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.animated-gradient-text {
+background: linear-gradient(to right, #ffffff, var(--tech-cyan), #ffffff);
+background-size: 200% auto;
+animation: shine 3s linear infinite;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.skill-card {
+animation: fadeInUp 0.6s ease-out backwards;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.skill-card:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+.service-card {
+animation: fadeInUp 0.6s ease-out backwards;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.service-card:hover {
+transform: translateY(-12px) scale(1.03);
+box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.float-animation {
+animation: float 3s ease-in-out infinite;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #000000;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.glass-effect {
+backdrop-filter: blur(10px);
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.contact-card {
+transition: all 0.3s ease;
+}
+.contact-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.scroll-reveal {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.6s ease-out;
+}
+.scroll-reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.button-hover {
+transition: all 0.3s ease;
+}
+.button-hover:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50/50 text-gray-900">
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<div class="flex justify-between items-center">
+<div class="text-xl font-bold text-primary hover:scale-105 transition-transform">Otto Shalom</div>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#skills" class="nav-link text-gray-700 hover:text-primary transition-colors">Skills</a>
+<a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors">Projects</a>
+<a href="#services" class="nav-link text-gray-700 hover:text-primary transition-colors">Services</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</nav>
+<section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
+<div class="w-full max-w-7xl mx-auto px-6 relative">
+<div class="max-w-4xl scroll-reveal">
+<h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+Otto Shalom<br>
+<span class="animated-gradient-text">Damilare</span>
+</h1>
+<p class="text-xl md:text-2xl text-gray-200 mb-4 font-medium opacity-0 animate-[fadeInUp_0.6s_0.3s_forwards]">
+Emerging AI Developer & Tech Generalist
+</p>
+<p class="text-lg text-gray-300 mb-8 max-w-2xl opacity-0 animate-[fadeInUp_0.6s_0.6s_forwards]">
+Building digital solutions with code, data & design.
+</p>
+<a href="https://wa.me/2349041955538" class="inline-flex items-center bg-gradient-to-r from-[#0066FF] to-[#00D1FF] text-white px-8 py-4 !rounded-button font-semibold text-lg hover:opacity-90 transition-all button-hover whitespace-nowrap opacity-0 animate-[fadeInUp_0.6s_0.9s_forwards]">
+<i class="ri-whatsapp-line mr-3 text-xl float-animation"></i>
+Contact Me
+</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+<i class="ri-arrow-down-line text-white text-2xl"></i>
+</div>
+</section>
+<section id="about" class="py-20 bg-gradient-to-br from-blue-50/50 to-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl font-bold text-primary mb-8">About Me</h2>
+<div class="bg-white p-8 rounded-2xl shadow-sm">
+<p class="text-lg text-gray-700 leading-relaxed">
+I'm Otto Shalom Damilare, currently studying at SQI College of ICT in Ogbomosho. I'm in my final year of a 2-year training program focused on AI, data, and digital technology. I love solving real-world problems through code and smart tools — from web scraping to building ML models.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-primary text-center mb-16">Skills</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-code-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">Programming</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• Python</li>
+<li>• HTML, CSS, Bootstrap</li>
+<li>• JavaScript</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-bar-chart-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">Data Analysis</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• Numpy, Pandas, Matplotlib</li>
+<li>• Power BI</li>
+<li>• Web Scraping</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-database-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">Database</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• SQL</li>
+<li>• MongoDB</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-file-text-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">Microsoft Office</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• Excel, Word</li>
+<li>• PowerPoint, Publisher</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-brain-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">AI & ML</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• Machine Learning</li>
+<li>• Learning: Deep Learning</li>
+</ul>
+</div>
+<div class="skill-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#0066FF]/10 to-[#00D1FF]/10 rounded-lg mb-4">
+<i class="ri-settings-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-3">Learning</h3>
+<ul class="space-y-2 text-gray-700">
+<li>• Java</li>
+<li>• Project Management</li>
+<li>• Software Management</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50/50">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold text-primary mb-8">Projects</h2>
+<p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+Explore my latest work and contributions to the tech community
+</p>
+<div class="bg-white p-12 rounded-2xl shadow-sm max-w-2xl mx-auto">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+<i class="ri-github-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">See my projects on GitHub</h3>
+<a href="https://github.com/shalomotto" class="inline-flex items-center bg-gradient-to-r from-[#0066FF] to-[#00D1FF] text-white px-8 py-4 !rounded-button font-semibold hover:opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-external-link-line mr-3"></i>
+View GitHub Profile
+</a>
+</div>
+</div>
+</section>
+<section id="services" class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-primary text-center mb-16">Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-spider-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">Website Scraping & Automation</h3>
+<p class="text-gray-600">Automated data extraction and web scraping solutions for your business needs.</p>
+</div>
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-code-s-slash-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">Python App Coding</h3>
+<p class="text-gray-600">Custom Python applications tailored to solve your specific business challenges.</p>
+</div>
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-layout-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">Portfolio Website Creation</h3>
+<p class="text-gray-600">Professional portfolio websites that showcase your work and attract clients.</p>
+</div>
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-robot-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">AI/ML Model Development</h3>
+<p class="text-gray-600">Machine learning models and AI solutions to automate and optimize your processes.</p>
+</div>
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-pie-chart-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">Business Data Analysis</h3>
+<p class="text-gray-600">Transform your raw data into actionable insights for better business decisions.</p>
+</div>
+<div class="service-card bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-server-line text-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-4">Database Setup & Management</h3>
+<p class="text-gray-600">Efficient database design, setup, and management for your applications.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gradient-to-br from-blue-50/50 to-gray-50">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold text-primary mb-8">Testimonials</h2>
+<div class="bg-white p-12 rounded-2xl shadow-sm max-w-2xl mx-auto">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+<i class="ri-chat-quote-line text-2xl text-primary"></i>
+</div>
+<p class="text-lg text-gray-600 italic">
+"Coming soon: real feedback from satisfied clients!"
+</p>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gradient-to-br from-[#0066FF] to-[#00D1FF] text-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+<p class="text-xl text-gray-300">Let's create solutions that matter!</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<a href="https://wa.me/2349041955538" class="flex items-center space-x-4 bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-green-500 rounded-lg">
+<i class="ri-whatsapp-line text-xl text-white"></i>
+</div>
+<div>
+<div class="font-semibold">WhatsApp</div>
+<div class="text-sm text-gray-300">+234 904 195 5538</div>
+</div>
+</a>
+<a href="tel:+2349041955538" class="flex items-center space-x-4 bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-lg">
+<i class="ri-phone-line text-xl text-white"></i>
+</div>
+<div>
+<div class="font-semibold">Phone</div>
+<div class="text-sm text-gray-300">+234 904 195 5538</div>
+</div>
+</a>
+<a href="https://www.linkedin.com/in/shalom-otto-9341a9333" class="flex items-center space-x-4 bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-600 rounded-lg">
+<i class="ri-linkedin-line text-xl text-white"></i>
+</div>
+<div>
+<div class="font-semibold">LinkedIn</div>
+<div class="text-sm text-gray-300">Connect with me</div>
+</div>
+</a>
+<a href="https://github.com/Shot02" class="flex items-center space-x-4 bg-white/10 p-6 rounded-xl hover:bg-white/20 transition-colors">
+<div class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-lg">
+<i class="ri-github-line text-xl text-white"></i>
+</div>
+<div>
+<div class="font-semibold">GitHub</div>
+<div class="text-sm text-gray-300">View my code</div>
+</div>
+</a>
+</div>
+<div class="text-center">
+<a href="https://wa.me/2349041955538" class="inline-flex items-center bg-white/10 backdrop-blur-sm text-white border border-white/20 px-12 py-4 !rounded-button font-semibold text-lg hover:bg-white/20 transition-colors whitespace-nowrap">
+<i class="ri-message-line mr-3 text-xl"></i>
+Contact Me Now
+</a>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-8">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<p class="text-gray-400">© 2025 Otto Shalom Damilare. All rights reserved.</p>
+</div>
+</footer>
+<script id="animations">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+// Scroll reveal animation
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.scroll-reveal').forEach(element => {
+observer.observe(element);
+});
+// Add animation delay to cards
+document.querySelectorAll('.skill-card').forEach((card, index) => {
+card.style.animationDelay = `${index * 0.1}s`;
+});
+document.querySelectorAll('.service-card').forEach((card, index) => {
+card.style.animationDelay = `${index * 0.1}s`;
+});
+});
+</script>
+<script id="mobile-menu">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('nav button');
+const navLinks = document.querySelector('nav .hidden');
+if (mobileMenuButton && navLinks) {
+mobileMenuButton.addEventListener('click', function() {
+navLinks.classList.toggle('hidden');
+navLinks.classList.toggle('flex');
+navLinks.classList.toggle('flex-col');
+navLinks.classList.toggle('absolute');
+navLinks.classList.toggle('top-full');
+navLinks.classList.toggle('left-0');
+navLinks.classList.toggle('w-full');
+navLinks.classList.toggle('bg-white');
+navLinks.classList.toggle('border-t');
+navLinks.classList.toggle('border-gray-100');
+navLinks.classList.toggle('py-4');
+});
+}
+});
+</script>
+</body>
+</html>
